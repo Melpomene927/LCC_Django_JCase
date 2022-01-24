@@ -1,1 +1,1 @@
-# LCC_Django_JCase
+### 初始專案
