@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "C:\\users\\mike_Chang\\.virtualenvs\\lcc_django_jcase-06wnuuue\\lib\\site-packages"
+    ]
+}

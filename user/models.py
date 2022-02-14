@@ -1,8 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.db.models.deletion import SET_NULL
+#from sqlalchemy import false
 
 # 縣市
+
+
 class City(models.Model):
     name = models.CharField(max_length=50, unique=True, null=False)
     createdon = models.DateField(auto_now_add=True)
@@ -33,13 +36,13 @@ class Profile(AbstractUser):
     # 是否通過認證
     certification = models.BooleanField(default=False)
     # 居住縣市
-    city = models.ForeignKey(City,on_delete=SET_NULL,null=True)
+    city = models.ForeignKey(City, on_delete=SET_NULL, null=True)
     # 身分
-    respondent = models.ForeignKey(Respondent,on_delete=SET_NULL,null=True)
+    respondent = models.ForeignKey(Respondent, on_delete=SET_NULL, null=True)
+    # Email
+    #email = models.EmailField(unique=True, null=False)
 
-    
     def __str__(self):
         return self.username
-
 
     # Create your models here.
